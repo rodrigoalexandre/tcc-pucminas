@@ -1,6 +1,6 @@
 package org.springframework.industprocess.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,7 +33,7 @@ public class SuppliersController {
     @Autowired
     private Environment env;
 
-    @PostMapping(value = "/suppliers", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/suppliers", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<SupplierDTO> findAllSuppliers() {
 
         try {
