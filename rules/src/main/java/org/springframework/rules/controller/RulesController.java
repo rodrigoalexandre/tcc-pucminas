@@ -1,6 +1,6 @@
 package org.springframework.rules.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,7 +34,7 @@ public class RulesController {
     @Autowired
     private Environment env;
 
-    @PostMapping(value = "/rules", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/rules", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<RuleDTO> findAllRules() {
 
         try {
