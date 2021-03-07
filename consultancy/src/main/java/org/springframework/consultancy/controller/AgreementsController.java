@@ -1,6 +1,6 @@
 package org.springframework.consultancy.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,7 +33,7 @@ public class AgreementsController {
     @Autowired
     private Environment env;
 
-    @PostMapping(value = "/agreements", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/agreements", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<AgreementDTO> findAllAgreements() {
 
         try {
